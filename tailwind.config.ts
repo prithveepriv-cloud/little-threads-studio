@@ -57,33 +57,70 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        success: {
+          DEFAULT: "hsl(var(--success))",
+          foreground: "hsl(var(--success-foreground))",
+        },
+        sky: {
+          DEFAULT: "hsl(var(--sky))",
+          foreground: "hsl(var(--sky-foreground))",
+        },
+        sunny: {
+          DEFAULT: "hsl(var(--sunny))",
+          foreground: "hsl(var(--sunny-foreground))",
+        },
+        blush: {
+          DEFAULT: "hsl(var(--blush))",
+          foreground: "hsl(var(--blush-foreground))",
+        },
+        mint: {
+          DEFAULT: "hsl(var(--mint))",
+          foreground: "hsl(var(--mint-foreground))",
+        },
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+        xl: "calc(var(--radius) + 4px)",
+        "2xl": "calc(var(--radius) + 8px)",
+      },
+      fontFamily: {
+        sans: ["Poppins", "ui-sans-serif", "system-ui", "sans-serif"],
+        display: ["Quicksand", "ui-sans-serif", "system-ui", "sans-serif"],
       },
       keyframes: {
         "accordion-down": {
-          from: {
-            height: "0",
-          },
-          to: {
-            height: "var(--radix-accordion-content-height)",
-          },
+          from: { height: "0" },
+          to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
-          from: {
-            height: "var(--radix-accordion-content-height)",
-          },
-          to: {
-            height: "0",
-          },
+          from: { height: "var(--radix-accordion-content-height)" },
+          to: { height: "0" },
+        },
+        shimmer: {
+          "100%": { transform: "translateX(100%)" },
+        },
+        bounce: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-5px)" },
         },
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        shimmer: "shimmer 1.5s infinite",
+        bounce: "bounce 0.6s ease-in-out",
+      },
+      boxShadow: {
+        soft: "0 2px 15px -3px hsl(0 0% 0% / 0.07), 0 4px 6px -2px hsl(0 0% 0% / 0.04)",
+        medium: "0 10px 40px -10px hsl(0 0% 0% / 0.1)",
+        large: "0 25px 50px -12px hsl(0 0% 0% / 0.12)",
+        glow: "0 0 30px hsl(15 90% 65% / 0.2)",
+      },
+      transitionTimingFunction: {
+        smooth: "cubic-bezier(0.22, 1, 0.36, 1)",
+        bounce: "cubic-bezier(0.34, 1.56, 0.64, 1)",
       },
     },
   },
